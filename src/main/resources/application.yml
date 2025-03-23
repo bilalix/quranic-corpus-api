@@ -7,3 +7,8 @@ netty:
   default:
     allocator:
       max-order: 3
+
+logging:
+  level:
+    root: INFO
+    io.micronaut: DEBUG
