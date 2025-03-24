@@ -3,6 +3,14 @@ micronaut:
     port: 6382
     cors:
       enabled: true
+      configurations:
+        default:
+          allowedOrigins: ["http://192.168.0.137:3000"]
+          # allowedOrigins: ["http://yourfrontend.yourdomain.com"]
+          allowedMethods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"]
+          allowedHeaders: ["*"]
+          # Optional: if you need to allow credentials (cookies, authorization headers)
+          allowCredentials: true
 netty:
   default:
     allocator:
