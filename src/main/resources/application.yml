@@ -5,8 +5,7 @@ micronaut:
       enabled: true
       configurations:
         default:
-          allowedOrigins: ["http://192.168.0.137:3000"]
-          # allowedOrigins: ["http://yourfrontend.yourdomain.com"]
+          allowedOrigins: ["http://quran.bilalelhoudaigui.com"]
           allowedMethods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"]
           allowedHeaders: ["*"]
           # Optional: if you need to allow credentials (cookies, authorization headers)
