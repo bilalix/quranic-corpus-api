@@ -18,8 +18,12 @@ RUN chmod +x ./gradlew
 ARG GITHUB_TOKEN
 ENV GITHUB_TOKEN=${GITHUB_TOKEN}
 
+# Pass the Micronaut environment as a build argument
+ARG MICRONAUT_ENV=prod
+ENV MICRONAUT_ENV=${MICRONAUT_ENV}
+
 # Build the application
-RUN ./gradlew shadowJar --no-daemon
+RUN ./gradlew shadowJar --no-daemon -Dmicronaut.environments=${MICRONAUT_ENV}
 
 # Stage 2: Create the runtime image
 FROM eclipse-temurin:17-jre-alpine
