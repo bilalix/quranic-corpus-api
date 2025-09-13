@@ -5,7 +5,7 @@ micronaut:
       enabled: true
       configurations:
         default:
-          allowedOrigins: ["http://quran.bilalelhoudaigui.com"]
+          allowedOrigins: ["http://localhost:3000", ]
           allowedMethods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"]
           allowedHeaders: ["*"]
           # Optional: if you need to allow credentials (cookies, authorization headers)
